@@ -1,33 +1,24 @@
 package UML;
 
 /**
- * Represents a Menu Item in a restaurant.
+ * This class represents a MenuItem offered by a Restaurant.
  * 
  * UML Concept:
- * - Basic class with attributes and methods
- * - Demonstrates encapsulation: private attributes, public getters/setters
+ * - Demonstrates basic class structure
+ * - Shows relationship: Restaurant "has many" MenuItems
  */
 public class MenuItem {
 
     // Attributes (private → encapsulation)
-    private int id;
     private String name;
     private double price;
 
     /**
-     * Constructor initializes MenuItem object
+     * Constructor initializes a menu item
      */
-    public MenuItem(int id, String name, double price) {
-        this.id = id;
+    public MenuItem(String name, double price) {
         this.name = name;
         this.price = price;
-    }
-
-    /**
-     * Getter for id
-     */
-    public int getId() {
-        return id;
     }
 
     /**
@@ -45,16 +36,9 @@ public class MenuItem {
     }
 
     /**
-     * Method to update the price of menu item
-     */
-    public void updatePrice(double newPrice) {
-        this.price = newPrice;
-    }
-
-    /**
-     * Display menu item details
+     * Method to display information about the menu item
      */
     public void displayItem() {
-        System.out.println("MenuItem ID: " + id + ", Name: " + name + ", Price: $" + price);
+        System.out.println(name + " - $" + price);
     }
 }
