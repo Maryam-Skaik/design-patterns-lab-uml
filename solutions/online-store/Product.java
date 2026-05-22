@@ -1,5 +1,3 @@
-package UML;
-
 /**
  * This class represents a Product in the online store.
  * 
