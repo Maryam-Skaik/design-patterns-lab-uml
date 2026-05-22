@@ -197,22 +197,36 @@ Car and Motorcycle are types of Vehicle.
 
 ---
 
+## 💾 Solutions
+
+📁 [`solutions/`](solutions/)
+
+**Note:** All activity solutions are now available in the `/solutions` folder. Each solution includes:
+- UML diagrams (README)
+- Clean Java implementation
+- Notes on relationships and key design points
+- Optional bonus methods
+
+> Students can use these as references after completing the activities to compare their implementations or understand design decisions.
+
+---
+
 ## 🚀 How to Use This Repo
 
-1. Fork the repository
-2. Clone it locally
-3. Explore the examples
-4. Complete activities inside [`/activities`](activities)
-5. Add your solutions
+1. Fork the repository  
+2. Clone it locally  
+3. Explore the examples  
+4. Complete activities inside [`/activities`](activities)  
+5. Check the [`/solutions`](solutions) folder for reference  
 
 ---
 
 ## 💡 Tips for Students
 
-- Think before coding
-- Keep classes focused and simple
-- Pay attention to relationships — they matter more than code
-- Use diagrams as your guide
+- Think before coding  
+- Keep classes focused and simple  
+- Pay attention to relationships — they matter more than code  
+- Use diagrams as your guide  
 
 ---
 
