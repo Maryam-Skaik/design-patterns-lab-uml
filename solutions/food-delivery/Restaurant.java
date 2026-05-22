@@ -1,61 +1,45 @@
 package UML;
 
-/**
- * This class represents a Restaurant in the Food Delivery System.
- * 
- * UML Concept:
- * - Demonstrates a class with attributes and methods
- * - Shows one-to-many relationship with MenuItem (a restaurant has many menu items)
- */
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a Restaurant.
+ * 
+ * UML Concept:
+ * - Shows composition: Restaurant contains many MenuItems
+ * - Demonstrates encapsulation, constructors, and behavior methods
+ */
 public class Restaurant {
 
     // Attributes
-    private String name; // Name of the restaurant
-    private String location; // Location of the restaurant
-
-    // One-to-many relationship: Restaurant has many MenuItems
-    private List<MenuItem> menuItems;
+    private String name;
+    private List<MenuItem> menu; // Relationship: has many MenuItems
 
     /**
-     * Constructor initializes the restaurant object
+     * Constructor initializes restaurant and empty menu
      */
-    public Restaurant(String name, String location) {
+    public Restaurant(String name) {
         this.name = name;
-        this.location = location;
-        this.menuItems = new ArrayList<>();
+        this.menu = new ArrayList<>();
     }
 
     /**
-     * Method to add a menu item to the restaurant
+     * Method to add a menu item
      */
     public void addMenuItem(MenuItem item) {
-        menuItems.add(item);
+        menu.add(item);
     }
 
     /**
-     * Method to remove a menu item
-     */
-    public void removeMenuItem(MenuItem item) {
-        menuItems.remove(item);
-    }
-
-    /**
-     * Getter for restaurant name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Method to display all menu items
+     * Method to display restaurant name and its menu
      */
     public void displayMenu() {
-        System.out.println("Menu for " + name + ":");
-        for (MenuItem item : menuItems) {
-            System.out.println("- " + item.getName() + " : $" + item.getPrice());
+        System.out.println("Restaurant: " + name);
+        System.out.println("Menu:");
+        for (MenuItem item : menu) {
+            item.displayItem();
         }
+        System.out.println("--------------------------");
     }
 }
